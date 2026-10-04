@@ -89,7 +89,7 @@ AKS
 | Phase | Engineering Milestone | Main Skills | Status |
 |---|---|---|---|
 | 1 | Workstation & Repository Foundation | Docker, kubectl, Helm, Git | ✅ Completed |
-| 2 | Container Engineering | Dockerfiles, images, registries, multi-stage builds | ⬜ Planned |
+| 2 | Container Engineering | Dockerfiles, images, registries, multi-stage builds | ✅ Completed |
 | 3 | Kubernetes Fundamentals | Pods, Deployments, ReplicaSets, Namespaces | ⬜ Planned |
 | 4 | Kubernetes Networking | Services, DNS, Ingress, traffic flow | ⬜ Planned |
 | 5 | Configuration & Secrets | ConfigMaps, Secrets, environment configuration | ⬜ Planned |

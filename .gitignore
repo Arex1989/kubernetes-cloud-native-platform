@@ -53,3 +53,7 @@ __pycache__/
 # Temporary files
 tmp/
 temp/
+
+# Python virtual environments
+.venv/
+venv/
