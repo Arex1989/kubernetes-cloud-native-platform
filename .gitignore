@@ -1,0 +1,55 @@
+# ==========================================
+# Project 4 - Kubernetes Cloud-Native Platform
+# ==========================================
+
+# macOS
+.DS_Store
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+.terraformrc
+terraform.rc
+
+# Terraform variable files may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Kubernetes sensitive/local configuration
+kubeconfig
+kubeconfig.*
+*.kubeconfig
+
+# Helm
+*.tgz
+
+# Application dependencies / build output
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
