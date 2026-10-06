@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: platform-api
+  namespace: project4
+  labels:
+    app: cloud-native-platform-api
+    phase: fundamentals
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: cloud-native-platform-api
+      managed-by: deployment
+
+  template:
+    metadata:
+      labels:
+        app: cloud-native-platform-api
+        managed-by: deployment
+        phase: fundamentals
+
+    spec:
+      containers:
+        - name: platform-api
+          image: cloud-native-platform-api:2.0.0
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP

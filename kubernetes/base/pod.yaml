@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: platform-api-pod
+  namespace: project4
+  labels:
+    app: cloud-native-platform-api
+    phase: fundamentals
+spec:
+  containers:
+    - name: platform-api
+      image: cloud-native-platform-api:2.0.0
+      imagePullPolicy: IfNotPresent
+      ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
