@@ -133,30 +133,45 @@ AKS
 
 ### Phase 1 — Workstation & Repository Foundation ✅ Completed
 
-Phase 1 established the local engineering workstation and repository foundation required for the cloud-native platform.
+Established the local engineering workstation, repository structure, tooling, Git workflow, and project foundation.
 
-Completed milestones:
+### Phase 2 — Container Engineering ✅ Completed
 
-- Audited the Apple Silicon ARM64 workstation
-- Validated Git and Homebrew
-- Installed and validated Docker Desktop and Docker Engine
-- Validated Docker Compose
-- Installed and validated kubectl
-- Installed and validated Helm
-- Validated Terraform
-- Validated Azure CLI and Azure authentication
-- Validated GitHub CLI and GitHub authentication
-- Established a security-aware `.gitignore`
-- Created the production-oriented repository structure
-- Defined the complete 15-phase engineering roadmap
-- Initialized Git version control
-- Created the GitHub repository
-- Configured the `origin` remote
-- Published the initial `main` branch to GitHub
+Built and hardened the application container using multi-stage Docker builds, image optimization, runtime validation, and container engineering practices.
+
+### Phase 3 — Kubernetes Fundamentals ✅ Completed
+
+Implemented Kubernetes Pods, ReplicaSets, Deployments, namespaces, scaling, self-healing, rolling updates, rollback, labels and selectors, and declarative desired-state reconciliation.
+
+Detailed implementation:
+
+[`docs/kubernetes-fundamentals.md`](docs/kubernetes-fundamentals.md)
+
+### Phase 4 — Kubernetes Networking ✅ Completed
+
+Implemented Kubernetes Services, EndpointSlices, Pod-to-Pod communication, CoreDNS service discovery, namespace-aware DNS, dynamic backend management, NGINX Ingress, host-based routing, and end-to-end HTTP access.
+
+Detailed implementation:
+
+[`docs/kubernetes-networking.md`](docs/kubernetes-networking.md)
+
+### Current Phase
+
+**Phase 5 — Configuration & Secrets 🚧 In Progress**
+
+Phase 5 introduces externalized application configuration and sensitive-data management using:
+
+- ConfigMaps
+- Kubernetes Secrets
+- Environment variables
+- `envFrom`
+- Volume-mounted configuration
+- Configuration updates and Pod rollouts
+- Secret handling and repository safety
+- Environment-specific configuration
 
 ### Next Phase
 
-**Phase 2 — Container Engineering**
+**Phase 6 — Storage & Stateful Workloads**
 
-The next phase will build the project's application workload and establish the container engineering lifecycle, including Dockerfiles, image construction, image optimization, registries, and multi-stage builds.
-
+The next phase will introduce persistent application storage using PersistentVolumes, PersistentVolumeClaims, StorageClasses, and stateful workload concepts.
