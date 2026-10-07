@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: platform-api
+  namespace: project4
+  labels:
+    app: cloud-native-platform-api
+    phase: networking
+spec:
+  type: ClusterIP
+  selector:
+    app: cloud-native-platform-api
+    managed-by: deployment
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080

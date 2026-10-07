@@ -91,7 +91,7 @@ AKS
 | 1 | Workstation & Repository Foundation | Docker, kubectl, Helm, Git | ✅ Completed |
 | 2 | Container Engineering | Dockerfiles, images, registries, multi-stage builds | ✅ Completed |
 | 3 | Kubernetes Fundamentals | Pods, Deployments, ReplicaSets, Namespaces | ✅ Completed |
-| 4 | Kubernetes Networking | Services, DNS, Ingress, traffic flow | ⬜ Planned |
+| 4 | Kubernetes Networking | Services, DNS, Ingress, traffic flow | ✅ Completed |
 | 5 | Configuration & Secrets | ConfigMaps, Secrets, environment configuration | ⬜ Planned |
 | 6 | Storage & Stateful Workloads | PV, PVC, StorageClasses | ⬜ Planned |
 | 7 | Production Workload Engineering | Probes, resources, HPA, disruption/resilience | ⬜ Planned |

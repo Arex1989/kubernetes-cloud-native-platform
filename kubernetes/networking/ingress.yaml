@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: platform-api
+  namespace: project4
+  labels:
+    app: cloud-native-platform-api
+    phase: networking
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: platform.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: platform-api
+                port:
+                  number: 80
