@@ -92,7 +92,7 @@ AKS
 | 2 | Container Engineering | Dockerfiles, images, registries, multi-stage builds | ✅ Completed |
 | 3 | Kubernetes Fundamentals | Pods, Deployments, ReplicaSets, Namespaces | ✅ Completed |
 | 4 | Kubernetes Networking | Services, DNS, Ingress, traffic flow | ✅ Completed |
-| 5 | Configuration & Secrets | ConfigMaps, Secrets, environment configuration | ⬜ Planned |
+| 5 | Configuration & Secrets | ConfigMaps, Secrets, environment configuration | ✅ Completed |
 | 6 | Storage & Stateful Workloads | PV, PVC, StorageClasses | ⬜ Planned |
 | 7 | Production Workload Engineering | Probes, resources, HPA, disruption/resilience | ⬜ Planned |
 | 8 | Helm & Application Packaging | Helm charts, values, environments | ⬜ Planned |
@@ -155,23 +155,36 @@ Detailed implementation:
 
 [`docs/kubernetes-networking.md`](docs/kubernetes-networking.md)
 
+### Phase 5 — Configuration & Secrets ✅ Completed
+
+Externalized application configuration using Kubernetes ConfigMaps, environment variables, and volume-mounted configuration files.
+
+Implemented Kubernetes Secret consumption using `secretKeyRef`, validated Secret rotation, demonstrated configuration update behaviour, and verified that sensitive runtime values are not stored in repository manifests.
+
+Created separate development and production configuration, validated environment promotion without rebuilding the container image, and restored the workload to the development state.
+
+Detailed implementation:
+
+[`docs/kubernetes-configuration-secrets.md`](docs/kubernetes-configuration-secrets.md)
+
 ### Current Phase
 
-**Phase 5 — Configuration & Secrets 🚧 In Progress**
+**Phase 6 — Storage & Stateful Workloads 🚧 In Progress**
 
-Phase 5 introduces externalized application configuration and sensitive-data management using:
+Phase 6 introduces persistent application storage and stateful workload engineering using:
 
-- ConfigMaps
-- Kubernetes Secrets
-- Environment variables
-- `envFrom`
-- Volume-mounted configuration
-- Configuration updates and Pod rollouts
-- Secret handling and repository safety
-- Environment-specific configuration
+- PersistentVolumes
+- PersistentVolumeClaims
+- StorageClasses
+- Dynamic and static provisioning concepts
+- Access modes
+- Volume lifecycle behaviour
+- Pod-to-storage integration
+- Persistent data validation
+- Stateful workload concepts
 
 ### Next Phase
 
-**Phase 6 — Storage & Stateful Workloads**
+**Phase 7 — Production Workload Engineering**
 
-The next phase will introduce persistent application storage using PersistentVolumes, PersistentVolumeClaims, StorageClasses, and stateful workload concepts.
+The next phase will introduce production workload controls including health probes, resource requests and limits, autoscaling, disruption handling, and workload resilience.

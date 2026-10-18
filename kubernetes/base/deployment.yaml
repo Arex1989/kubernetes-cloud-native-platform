@@ -27,7 +27,33 @@ spec:
           image: cloud-native-platform-api:2.0.0
           imagePullPolicy: IfNotPresent
 
+          envFrom:
+            - configMapRef:
+                name: platform-api-environment-config
+
+
+
+          env:
+            - name: API_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: platform-api-secret
+                  key: API_USERNAME
+            - name: API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: platform-api-secret
+                  key: API_TOKEN
+          volumeMounts:
+            - name: platform-config-volume
+              mountPath: /etc/platform
+              readOnly: true
+
           ports:
             - name: http
               containerPort: 8080
               protocol: TCP
+      volumes:
+        - name: platform-config-volume
+          configMap:
+            name: platform-api-file-config
