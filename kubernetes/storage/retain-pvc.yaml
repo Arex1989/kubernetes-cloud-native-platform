@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: platform-retain-data
+  namespace: project4
+  labels:
+    app: cloud-native-platform-api
+    phase: storage
+    storage-policy: retain
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: platform-retain
+  resources:
+    requests:
+      storage: 1Gi

@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: storage-consumer-replacement
+  namespace: project4
+  labels:
+    app: storage-consumer-replacement
+    phase: storage
+spec:
+  containers:
+    - name: storage-consumer
+      image: busybox:1.36
+      command:
+        - sh
+        - -c
+        - |
+          echo "Replacement storage consumer started."
+          sleep 3600
+      volumeMounts:
+        - name: persistent-data
+          mountPath: /data
+  volumes:
+    - name: persistent-data
+      persistentVolumeClaim:
+        claimName: platform-data

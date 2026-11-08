@@ -169,19 +169,17 @@ Detailed implementation:
 
 ### Current Phase
 
-**Phase 6 — Storage & Stateful Workloads 🚧 In Progress**
+### Phase 6 – Storage & Stateful Workloads ✅ Completed
 
-Phase 6 introduces persistent application storage and stateful workload engineering using:
+Implemented Kubernetes persistent storage and stateful workload engineering using PersistentVolumes, PersistentVolumeClaims, StorageClasses, Deployments, StatefulSets, headless Services, and dynamically provisioned storage.
 
-- PersistentVolumes
-- PersistentVolumeClaims
-- StorageClasses
-- Dynamic and static provisioning concepts
-- Access modes
-- Volume lifecycle behaviour
-- Pod-to-storage integration
-- Persistent data validation
-- Stateful workload concepts
+Validated persistent data survival across Pod recreation, PVC/PV lifecycle behavior, `Delete` and `Retain` reclaim policies, retained-volume recovery, stable StatefulSet Pod and DNS identities, per-Pod persistent volumes, and storage preservation across StatefulSet scale-down and scale-up operations.
+
+Recovered and reconstructed the local Kubernetes environment after workstation migration, demonstrating that source-controlled manifests and declarative infrastructure definitions can be used to rebuild ephemeral development environments.
+
+Detailed implementation:
+
+[`docs/kubernetes-storage.md`](docs/kubernetes-storage.md)
 
 ### Next Phase
 
