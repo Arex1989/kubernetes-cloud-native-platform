@@ -1,0 +1,14 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: platform-api
+  namespace: project4
+  labels:
+    app: cloud-native-platform-api
+    phase: production
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: cloud-native-platform-api
+      managed-by: deployment
