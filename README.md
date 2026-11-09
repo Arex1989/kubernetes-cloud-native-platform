@@ -93,8 +93,8 @@ AKS
 | 3 | Kubernetes Fundamentals | Pods, Deployments, ReplicaSets, Namespaces | ✅ Completed |
 | 4 | Kubernetes Networking | Services, DNS, Ingress, traffic flow | ✅ Completed |
 | 5 | Configuration & Secrets | ConfigMaps, Secrets, environment configuration | ✅ Completed |
-| 6 | Storage & Stateful Workloads | PV, PVC, StorageClasses | ⬜ Planned |
-| 7 | Production Workload Engineering | Probes, resources, HPA, disruption/resilience | ⬜ Planned |
+| 6 | Storage & Stateful Workloads | PV, PVC, StorageClasses | ✅ Completed |
+| 7 | Production Workload Engineering | Probes, resources, HPA, disruption/resilience | ✅ Completed |
 | 8 | Helm & Application Packaging | Helm charts, values, environments | ⬜ Planned |
 | 9 | Kubernetes Security | RBAC, ServiceAccounts, security contexts, scanning | ⬜ Planned |
 | 10 | Observability | Prometheus, Grafana, metrics, logs | ⬜ Planned |
@@ -181,8 +181,12 @@ Detailed implementation:
 
 [`docs/kubernetes-storage.md`](docs/kubernetes-storage.md)
 
+### Phase 7 — Production Workload Engineering
+
+Phase 7 completed the production workload engineering layer with startup, liveness, and readiness probes; CPU and memory requests and limits; Horizontal Pod Autoscaling; PodDisruptionBudget protection; rolling-update availability controls; and production Kustomize composition with environment-specific configuration.
+
 ### Next Phase
 
-**Phase 7 — Production Workload Engineering**
+**Phase 8 — Helm & Application Packaging**
 
-The next phase will introduce production workload controls including health probes, resource requests and limits, autoscaling, disruption handling, and workload resilience.
+The next phase will package the Kubernetes application using Helm charts and environment-specific values, building on the production-ready manifests completed in Phase 7.
