@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: platform-api-file-config
+  namespace: project4
+  labels:
+    app: cloud-native-platform-api
+    phase: configuration
+data:
+  application.properties: |
+    application.name=cloud-native-platform-api
+    application.environment=development
+    logging.level=debug
+    feature.health.enabled=true
+    feature.metrics.enabled=true
